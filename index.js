@@ -18,6 +18,12 @@ app.get("/userNew",(userRequest,userresponse)=>{
     userresponse.json(arr);
 })
 
+app.post("/newuser",(userRequest,userresponse)=>{
+    const newdata=userRequest.body;
+    arr.push(newdata);
+    userresponse.json(arr);
+})
+
 
 app.listen(3000,()=>{
     console.log("Server Running Successfully");
